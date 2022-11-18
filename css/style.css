@@ -1,0 +1,226 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-position: right top;
+    font-family: "Lato", "sans-serif";
+    font-weight: 400;
+    font-size: 60;
+    line-height: 1.7;
+    color: #000;
+}
+
+.header{
+    position: relative;
+    height: 100vh;
+    background-image: linear-gradient(
+    to right bottom,
+     rgba(225, 225, 225, 0.2),
+      rgba(225, 140, 90, 0.1)),
+      url(../img/currycenterblur.jpg); 
+
+    background-size: cover;
+    background-position: top;
+
+}
+.sub-header-text{
+    visibility: hidden;
+}
+.header-primary-title{
+    background-color: rgba(255, 0, 0, 0.7);
+    color: white;
+    font-weight: 500;
+
+    animation: moveInCenterFromAbove 1s;
+}
+
+.univ-title{
+    font-size: 1.8rem;
+   text-align: center;
+}
+
+.header-banner{
+    display: none;
+}
+
+
+.title-main, .title-sub{
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    line-height: normal;
+}
+
+.title-main {
+    /* for myNeu text originally 2rem */
+    font-size: 3.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 5px;
+}
+
+p.title-main span{
+    font-style: italic;
+}
+
+.frame-form{
+    margin-top:2rem;
+    margin-left: 15%;
+    background-color: rgba(255, 0, 0, 0.7);
+    width:70%;
+
+    animation: slowlyAppear 1.5s;
+}
+
+.in-form-header{
+    margin-top:15px;
+}
+
+.form-action{
+    background-color: rgba(225, 225, 225, 0.5);
+    margin-top:1rem;
+    padding-top: 10px;
+    width: 100%;
+}
+
+.form-action div{
+
+}
+
+#username, #password{
+    height: 20px;
+    font-size: 1em;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.form-action #loginBtn{
+    background-color: #999;
+    color: white;
+    font-size: 1rem;
+    margin-left: 50%;
+    margin-top:10px;
+    margin-bottom:10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    transform: translate(-50%);
+}
+
+.password-issue{
+    color: #fff;
+    display: block;
+    font-style: italic;
+    line-height: normal;
+    padding-left:10%;
+    text-decoration: none;
+}
+
+.footer-menu{
+    background-color: rgba(55, 55, 55, 0.7);
+    bottom:0px;
+    color: white;
+
+    
+    position: absolute;
+    text-align: center;
+
+    animation: slowlyAppear 2s;
+}
+.bottom-menu a{
+    color: white;
+    text-decoration: none;
+}
+
+@media only screen and (min-width: 500px){
+    .footer-menu{
+        width: 100%;
+    }
+
+    .frame-form{
+        width:50%;
+        margin-left:25%;     
+    }
+    .sub-header-text{
+        visibility: hidden;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    .header-primary-title{
+        height: 120px;
+        position: relative;
+        top: 100px;
+
+        animation: moveInCenterFromLeft 2s;
+    }
+    .sub-header-text{
+        visibility: visible;
+        background-color: rgba(55, 55, 55, 0.7); 
+        color: white; 
+        font-family: Arial, Helvetica, sans-serif; 
+        font-size: 0.9em; 
+        letter-spacing: 0.05em; 
+        margin-top:100px;
+        text-align: center;
+        width: 65%;
+        animation: slowlyAppear 4s;
+    }
+    .univ-title{
+        font-size: 2.5rem;
+        padding-top: 1.8rem;
+        padding-left: 20%;
+        text-align: unset;
+    }
+    .frame-form{
+        width:230px;
+        height:370px;
+        margin-top:unset;
+        margin-left:65%;
+        /* this is for myNeu text */
+        padding-top:101px;
+        position: absolute;
+        top:0;
+        z-index: 0;
+
+        animation: moveInCenterFromAbove 2s;
+    }
+    .footer-menu{
+        animation: moveInCenterFromAbove 1s;
+    }
+}
+
+@keyframes moveInCenterFromAbove {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes moveInCenterFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes slowlyAppear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
